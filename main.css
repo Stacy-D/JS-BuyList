@@ -1,3 +1,107 @@
-h1 {
-    color: red;
+body {
+    background: lightgrey;
+    margin: 0;
+}
+.main-container {
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 800px;
+    min-width: 500px;
+}
+.right-column {
+    width: 20%;
+    float: right;
+    background: white;
+    border: 2px solid gray;
+    padding: 5px;
+    margin-left: 5%;
+    border-radius: 10%;
+}
+.column-left {
+    border: 2px solid gray;
+    background: white;
+    margin-bottom: 10px;
+    width: 75%;
+}
+.title-right {
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 2px solid gray
+}
+.right-column .item-left, .right-column .item-bought {
+    display: inline-block;
+    padding: 3px;
+    margin-top: 10px;
+    border-radius: 20%;
+    background: #cdcbcb;
+}
+.right-column .item-left-num, .item-bought-num{
+    background: orange;
+    padding: 2px;
+    border-radius: 33%;
+    color: white;
+}
+.item-bought, .item-bought-num {
+    text-decoration: line-through;
+}
+.add-line {
+    outline: none;
+    padding: 5px;
+}
+.column-left .product-list {
+    
+}
+.list-row {
+    height: 60px;
+    overflow: hidden;
+    border-top: 1px solid gray;
+    margin-left: 5%;
+}
+/*Кнопки*/
+.bl-label {
+    background: #cdcbcb;
+}
+.bl-plus {
+    background: #04a613;
+    border: 0px;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+}
+.bl-minus {
+    background: red;
+    border: 0px;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+}
+.bl-cross {
+    background: red;
+    border: 0px;
+    outline: none;
+    border-radius: 20%;
+    color: white;
+}
+.bl-buy {
+    background: #cdcbcb;
+    border: 0px;
+    outline: none;
+    border-radius: 15%;
+}
+.bl-product {
+    float: left;
+    width: 30%;
+    line-height: 50px;
+    margin: 2px;
+}
+.bl-count {
+    width:20%;
+    line-height: 50px;
+    display: inline-block;
+}
+.bl-buttons {
+    line-height: 50px;
+    width: 30%;
+    float: right;
 }
