@@ -35,20 +35,18 @@
         </div>
         <div class="column-left">
             <div class="add-line">
-                <input type="text" placeholder="Тут має бути товар" />
-                <button> Додати</button>
+                <input type="text" class="add-product" placeholder="Тут має бути товар" />
+                <button class="add-product-but"> Додати</button>
             </div>
-            <div class="product-list">
+            <div class="product-list clearfix">
                 <div class="list-row">
                     <div class="bl-product">
-                        <div class="item">
                             Огірки
-                        </div>
                     </div>
                     <div class="bl-count">
                         <button class="bl-minus">-</button>
                         <span class="bl-label">3</span>
-                        <button class="bl-plus">+</button>
+                        <button class="bl-plus" data-tooltip="Add">+</button>
                     </div>
                     <div class="bl-buttons">
                         <button class="bl-buy">
@@ -61,9 +59,7 @@
                 </div>
                 <div class="list-row">
                     <div class="bl-product">
-                        <div class="item">
                             Лимони
-                        </div>
                     </div>
                     <div class="bl-count">
                         <button class="bl-minus">-</button>
@@ -74,16 +70,14 @@
                         <button class="bl-buy">
                             Куплено
                         </button>
-                        <button class="bl-cross">
+                        <button class="bl-cross" data-tooltip="Cross">
                             Х
                         </button>
                     </div>
                 </div>
                 <div class="list-row">
                     <div class="bl-product">
-                        <div class="item">
                             Помідори
-                        </div>
                     </div>
                     <div class="bl-count">
                         <button class="bl-minus">-</button>
@@ -101,6 +95,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="sticker">
+        <div class="sticker-title"> BuyList</div>
+        <div class="sticker-created">created by</div>
+        <div class="sticker-name">Stacy</div>
     </div>
 </body>
 

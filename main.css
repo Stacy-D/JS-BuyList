@@ -9,69 +9,98 @@ body {
     max-width: 800px;
     min-width: 500px;
 }
+
 .right-column {
     width: 20%;
     float: right;
     background: white;
-    border: 2px solid gray;
+    border: 2px solid #e6e6e6;
     padding: 5px;
     margin-left: 5%;
     border-radius: 10%;
 }
 .column-left {
-    border: 2px solid gray;
+    border: 2px solid #e6e6e6;
     background: white;
     margin-bottom: 10px;
     width: 75%;
 }
+@media (max-width: 500px) {
+    .colomn-left {
+        width: 100%;
+    }
+    .colomn-right {
+        width: 100;
+    }
+    .container {
+        min-width: 200px;
+    }
+}
 .title-right {
     font-weight: bold;
     padding: 5px;
-    border-bottom: 2px solid gray
+    border-bottom: 1px solid #e6e6e6;
+        
 }
 .right-column .item-left, .right-column .item-bought {
     display: inline-block;
-    padding: 3px;
+    padding: 2px;
     margin-top: 10px;
     border-radius: 20%;
-    background: #cdcbcb;
+    background: #e6e6e6;
 }
 .right-column .item-left-num, .item-bought-num{
+    display:inline-block;
     background: orange;
-    padding: 2px;
-    border-radius: 33%;
+    padding: 3px;
+    border-radius: 50%;
     color: white;
+    font-size: 10px;
 }
 .item-bought, .item-bought-num {
     text-decoration: line-through;
 }
 .add-line {
     outline: none;
-    padding: 5px;
+    position: relative;
+    height:40px;
+    margin: 2%;
 }
-.column-left .product-list {
-    
+.product-list {
+    margin-left: 2%;
 }
 .list-row {
-    height: 60px;
-    overflow: hidden;
-    border-top: 1px solid gray;
-    margin-left: 5%;
+    position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-top: 1px solid #e6e6e6;
 }
 /*Кнопки*/
 .bl-label {
-    background: #cdcbcb;
+    background: #e6e6e6;
+    padding: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 15%;
+    line-height: 1;
+
 }
 .bl-plus {
     background: #04a613;
+    display: inline-block;
     border: 0px;
     outline: none;
     border-radius: 50%;
     color: white;
+    width: 35px;
+    height: 35px;
 }
 .bl-minus {
-    background: red;
+    background: #DC143C;
+    display: inline-block;
     border: 0px;
+    width: 35px;
+    height: 35px;
     outline: none;
     border-radius: 50%;
     color: white;
@@ -82,26 +111,127 @@ body {
     outline: none;
     border-radius: 20%;
     color: white;
+    padding: 10px;
 }
 .bl-buy {
-    background: #cdcbcb;
+    background: #e6e6e6;
     border: 0px;
     outline: none;
     border-radius: 15%;
+    padding: 10px;
 }
 .bl-product {
     float: left;
     width: 30%;
-    line-height: 50px;
-    margin: 2px;
+    margin-top: 1%;
 }
 .bl-count {
     width:20%;
-    line-height: 50px;
     display: inline-block;
 }
 .bl-buttons {
-    line-height: 50px;
     width: 30%;
-    float: right;
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 1005;
+    display: inline-block;
+}
+.sticker {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    bottom: -120px;
+    background-color: darkkhaki;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 200ms ease;
+}
+.sticker:hover {
+    transform: translateY(-100px);
+}
+.sticker-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+.sticker-created {
+    font-size: 15px;
+}
+.sticker-name {
+    padding-top: 10px;
+    font-size: 20px;
+}
+@media print {
+    .sticker {
+        background: white;
+        color: black;
+        border: 2px solid #e6e6e6;
+        
+    }
+    .sticker-title {
+        display: none;
+    }
+    
+}
+button {
+    position: relative;
+    text-align: center;
+    border: none;
+    outline: 0;
+}
+    button::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        top:0;
+        color: white;
+        width: 80px;
+        left: 50%;
+        margin-left: -40px;
+        top: -25px;
+        height: 15px;
+        display: block;
+        background-color: blueviolet;
+        transform: scale(0);
+        transform-origin: 50% 100%;
+        transition: all 300ms linear;
+    }
+button:hover::before {
+    transform: scale(1);
+}
+.add-product {
+    position: absolute;
+    top:10%;
+    outline: 0;
+    left: 0;
+    height: 88%;
+    width: 80%;
+    border: 1px solid deepskyblue;
+    border-right: none;
+}
+.add-product-but {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width:20%;
+    height:98%;
+    background-color: deepskyblue;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+.clearfix::after {
+visibility: hidden; 
+content:""; 
+height: 0; 
+clear: both; 
+ }
+.items-left {
+    padding-bottom: 10%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #e6e6e6;
 }
