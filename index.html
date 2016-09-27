@@ -4,103 +4,54 @@
 <head lang="uk">
     <meta charset="UTF-8">
     <title>Buy List</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
+    <link rel="stylesheet" type="text/css" href="main.css" /> </head>
 
 <body>
     <div class="main-container">
-        <div class="right-column">
-            <div class="items-left">
-                <div class="title-right">Залишилося</div>
-                <div class="item-left">
-                    Огірки
-                    <span class="item-left-num"> 1</span>
-                </div>
-                <div class="item-left">
-                    Помідори
-                    <span class="item-left-num"> 1</span>
-                </div>
-                <div class="item-left">
-                    Лимони
-                    <span class="item-left-num"> 1</span>
-                </div>
-            </div>
-            <div class="items-bought">
-                <div class="title-right">Куплене</div>
-                <div class="item-bought">
-                    Томати
-                    <span class="item-bought-num"> 1</span>
-                </div>
-            </div>
-        </div>
         <div class="column-left">
             <div class="add-line">
                 <input type="text" class="add-product" placeholder="Тут має бути товар" />
-                <button class="add-product-but"> Додати</button>
+                <button class="add-product-but" data-tooltip="Add product" > Додати</button>
             </div>
-            <div class="product-list clearfix">
-                <div class="list-row">
-                    <div class="bl-product">
-                            Огірки
-                    </div>
-                    <div class="bl-count">
-                        <button class="bl-minus">-</button>
-                        <span class="bl-label">3</span>
-                        <button class="bl-plus" data-tooltip="Add">+</button>
-                    </div>
-                    <div class="bl-buttons">
-                        <button class="bl-buy">
-                            Куплено
-                        </button>
-                        <button class="bl-cross">
-                            Х
-                        </button>
-                    </div>
-                </div>
-                <div class="list-row">
-                    <div class="bl-product">
-                            Лимони
-                    </div>
-                    <div class="bl-count">
-                        <button class="bl-minus">-</button>
-                        <span class="bl-label">3</span>
-                        <button class="bl-plus">+</button>
-                    </div>
-                    <div class="bl-buttons">
-                        <button class="bl-buy">
-                            Куплено
-                        </button>
-                        <button class="bl-cross" data-tooltip="Cross">
-                            Х
-                        </button>
-                    </div>
-                </div>
-                <div class="list-row">
-                    <div class="bl-product">
-                            Помідори
-                    </div>
-                    <div class="bl-count">
-                        <button class="bl-minus">-</button>
-                        <span class="bl-label">3</span>
-                        <button class="bl-plus">+</button>
-                    </div>
-                    <div class="bl-buttons">
-                        <button class="bl-buy">
-                            Куплено
-                        </button>
-                        <button class="bl-cross">
-                            Х
-                        </button>
-                    </div>
-                </div>
+            <div class="product-list">
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="items-left">
+                <div class="title-right">Залишилося</div>
+                <div class="item-left"> Огірки <span class="item-left-num"> 1</span> </div>
+                <div class="item-left"> Помідори <span class="item-left-num"> 1</span> </div>
+                <div class="item-left"> Лимони <span class="item-left-num"> 1</span> </div>
+            </div>
+            <div class="items-bought">
+                <div class="title-right">Куплене</div>
+                <div class="item-bought"> Томати <span class="item-bought-num"> 1</span> </div>
             </div>
         </div>
     </div>
     <div class="sticker">
         <div class="sticker-title"> BuyList</div>
         <div class="sticker-created">created by</div>
-        <div class="sticker-name">Stacy</div>
+        <div class="sticker-name">Anastasia</div>
     </div>
+    <div class="row-template" style="display: none;">
+        <div class="list-row clearfix">
+            <div class="bl-product"> Огірки </div>
+            <div class="bl-count">
+                <button class="bl-minus" data-tooltip="Minus">-</button> <span class="bl-label">3</span>
+                <button class="bl-plus" data-tooltip="Add">+</button>
+            </div>
+            <div class="bl-buttons">
+                <button class="bl-unbuy" data-tooltip="Cancel"> Не куплено </button>
+                <button class="bl-buy" data-tooltip="Buy"> Куплено </button>
+                <button class="bl-cross" data-tooltip="Delete"> Х </button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js">
+    </script>
+    <script type="text/javascript" src="main.js">
+    </script>
 </body>
 
 </html>
