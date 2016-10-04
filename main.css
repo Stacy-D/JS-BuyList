@@ -7,6 +7,8 @@ body {
     margin-top: 100px;
     width: 90%;
     max-width: 1200px;
+    font-family: "Courier";
+    font-size: 15px;
 }
 
 .right-column {
@@ -42,15 +44,16 @@ body {
     border-bottom: 1px solid #e6e6e6;
         
 }
-.item-left,.item-bought {
+.item-left {
     display: inline-block;
     background-color: #eaeaea;
     color: #5d5d5d;
-    padding: 8px 12px;
-    margin-top: 4px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-right: 5px;
     border-radius: 5px;
 }
-.item-left-num, .item-bought-num{
+.item-stat-qua{
     text-decoration: none;
     background-color: orange;
     color: white;
@@ -58,7 +61,7 @@ body {
     padding: 3px 6px;
     border-radius: 50%;
 }
-.item-bought, .item-bought-num {
+.sold {
     text-decoration: line-through;
 }
 .add-line {
@@ -69,6 +72,7 @@ body {
 }
 .product-list {
     margin-left: 2%;
+    margin-right: 2%;
 }
 .list-row {
     position: relative;
@@ -121,12 +125,20 @@ body {
     border-radius: 15%;
     padding: 10px;
 }
-.bl-product {
+.bl-unbuy {
+    background: #e6e6e6;
+    border: 0px;
+    outline: none;
+    border-radius: 15%;
+    padding: 10px;
+}
+.bl-product, .title-edit {
     float: left;
     width: 30%;
     margin-top: 1%;
 }
 .bl-count {
+    margin-left:5%;;
     width:20%;
     display: inline-block;
 }
@@ -137,6 +149,7 @@ body {
     width: 20%;
     height: 1005;
     display: inline-block;
+    text-align: right;
 }
 .sticker {
     position: fixed;
@@ -234,10 +247,15 @@ content:"";
 height: 0; 
 clear: both; 
  }
+.bought-items, not-bought-items {
+    font-size: 12px;
+}
 .items-left {
-    padding-bottom: 10%;
-    margin-bottom: 5%;
+    padding-bottom: 5%;
     border-bottom: 1px solid #e6e6e6;
+}
+.items-bought {
+        padding-bottom: 10%;
 }
 .state-not-bought .bl-unbuy{
     display: none;
@@ -245,6 +263,18 @@ clear: both;
 .state-bought .bl-buy, .state-bought .bl-cross{
     display: none;
 }
+.state-bought .bl-plus{
+    display: none;
+}
+.state-bought .bl-minus{
+    visibility: hidden;
+}
 .state-bought .bl-product{
     text-decoration: line-through;
+}
+.state-not-edit  .title-edit{
+    display: none;
+}
+.state-edit  .bl-product{
+    display: none;
 }
